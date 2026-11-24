@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수범 VLOG 1994</title>
+<link rel="stylesheet" href="fonts/jua/index.css">
+<link rel="stylesheet" href="fonts/dohyeon/index.css">
+<link rel="stylesheet" href="fonts/fontsource-vt323/index.css">
+<style>
+  html,body{margin:0;background:#000;overflow:hidden}
+  #stage{position:relative;width:1280px;height:720px;overflow:hidden;background:#000;font-family:'Jua',sans-serif}
+  .scene{position:absolute;inset:0;opacity:0}
+  .abs{position:absolute}
+  /* HUD */
+  .hud{position:absolute;font-family:'VT323',monospace;color:#fff;font-size:44px;letter-spacing:2px;
+       text-shadow:2px 0 rgba(255,0,60,.7),-2px 0 rgba(0,220,255,.7),0 0 8px rgba(0,0,0,.6);z-index:50}
+  #scan{position:absolute;inset:0;z-index:60;pointer-events:none;
+        background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 2px,transparent 2px 4px)}
+  #vig{position:absolute;inset:0;z-index:61;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.65) 100%)}
+  #noise{position:absolute;inset:0;width:100%;height:100%;z-index:55;image-rendering:pixelated;mix-blend-mode:screen}
+  #track{position:absolute;left:0;width:100%;height:46px;z-index:56;
+         background:linear-gradient(180deg,transparent,rgba(255,255,255,.55),rgba(255,255,255,.15),transparent);filter:blur(1px)}
+  .caption{position:absolute;left:50%;bottom:70px;transform:translateX(-50%);background:#ffe14a;color:#1b1b1b;
+           font-family:'Do Hyeon';font-size:46px;padding:10px 30px;border:5px solid #1b1b1b;border-radius:14px;
+           box-shadow:8px 8px 0 #1b1b1b;white-space:nowrap;z-index:20}
+  .chalk{font-family:'Jua';color:#f3f6ee;text-shadow:0 0 2px rgba(255,255,255,.6);white-space:nowrap}
+  .card{position:absolute;width:250px;height:190px;border:5px solid #1b1b1b;border-radius:22px;box-shadow:9px 9px 0 #1b1b1b;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Do Hyeon';font-size:38px;color:#1b1b1b}
+  .card svg{width:110px;height:90px}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0: static -> PLAY -> title -->
+  <div class="scene" id="s0" style="background:#1430b8">
+    <div id="play" class="abs" style="left:80px;top:80px;font-family:'VT323';font-size:90px;color:#fff">▶ PLAY</div>
+    <div id="title" class="abs" style="inset:0;background:#ffd23f;opacity:0">
+      <div id="dots" class="abs" style="inset:-40px;background-image:radial-gradient(#ff7aa8 14px,transparent 15px);background-size:90px 90px;opacity:.55"></div>
+      <div id="t1" class="abs" style="left:0;width:100%;top:170px;text-align:center;font-size:96px;color:#1b1b1b;-webkit-text-stroke:0">수범이의</div>
+      <div id="t2" class="abs" style="left:0;width:100%;top:285px;text-align:center;font-size:150px;color:#ff3d6e;
+           -webkit-text-stroke:6px #1b1b1b;paint-order:stroke fill;text-shadow:10px 10px 0 #1b1b1b">국민학교 VLOG</div>
+      <div id="t3" class="abs" style="left:930px;top:400px;background:#2fd3c6;border:5px solid #1b1b1b;border-radius:50%;
+           width:190px;height:190px;display:flex;align-items:center;justify-content:center;flex-direction:column;
+           font-family:'Do Hyeon';font-size:34px;color:#1b1b1b;box-shadow:7px 7px 0 #1b1b1b;line-height:1.05">since<br><span style="font-size:58px">1994</span></div>
+    </div>
+  </div>
+
+  <!-- S1: 등교 -->
+  <div class="scene" id="s1" style="background:linear-gradient(#7fd3ff,#d9f3ff 70%)">
+    <svg class="abs" id="sun" style="left:1040px;top:40px" width="180" height="180" viewBox="-90 -90 180 180">
+      <g stroke="#ffb400" stroke-width="10" stroke-linecap="round">
+        <line x1="0" y1="-80" x2="0" y2="-58"/><line x1="0" y1="80" x2="0" y2="58"/><line x1="-80" y1="0" x2="-58" y2="0"/><line x1="80" y1="0" x2="58" y2="0"/>
+        <line x1="-57" y1="-57" x2="-41" y2="-41"/><line x1="57" y1="57" x2="41" y2="41"/><line x1="-57" y1="57" x2="-41" y2="41"/><line x1="57" y1="-57" x2="41" y2="-41"/>
+      </g><circle r="46" fill="#ffd23f" stroke="#1b1b1b" stroke-width="5"/>
+    </svg>
+    <svg class="abs" id="cloud1" style="top:70px" width="220" height="90" viewBox="0 0 220 90"><path d="M30 80 Q0 80 10 55 Q15 30 50 38 Q60 5 105 15 Q140 0 155 35 Q205 30 205 62 Q210 80 180 80Z" fill="#fff" stroke="#1b1b1b" stroke-width="5"/></svg>
+    <svg class="abs" id="cloud2" style="top:150px" width="160" height="70" viewBox="0 0 220 90"><path d="M30 80 Q0 80 10 55 Q15 30 50 38 Q60 5 105 15 Q140 0 155 35 Q205 30 205 62 Q210 80 180 80Z" fill="#fff" stroke="#1b1b1b" stroke-width="5"/></svg>
+    <!-- school -->
+    <svg class="abs" id="school" style="left:250px;top:150px" width="780" height="440" viewBox="0 0 780 440">
+      <rect x="40" y="150" width="700" height="290" fill="#f4e3c1" stroke="#1b1b1b" stroke-width="6"/>
+      <rect x="310" y="60" width="160" height="380" fill="#efd6a6" stroke="#1b1b1b" stroke-width="6"/>
+      <circle cx="390" cy="115" r="36" fill="#fff" stroke="#1b1b1b" stroke-width="5"/>
+      <line x1="390" y1="115" x2="390" y2="90" stroke="#1b1b1b" stroke-width="5" stroke-linecap="round"/>
+      <line x1="390" y1="115" x2="410" y2="122" stroke="#1b1b1b" stroke-width="5" stroke-linecap="round"/>
+      <rect x="250" y="168" width="280" height="44" rx="6" fill="#fff" stroke="#1b1b1b" stroke-width="4"/>
+      <text x="390" y="201" text-anchor="middle" font-family="Do Hyeon" font-size="30" fill="#1b1b1b">새싹국민학교</text>
+      <g fill="#8fd8ff" stroke="#1b1b1b" stroke-width="4">
+        <rect x="75" y="240" width="60" height="55"/><rect x="160" y="240" width="60" height="55"/><rect x="245" y="240" width="45" height="55"/>
+        <rect x="490" y="240" width="45" height="55"/><rect x="560" y="240" width="60" height="55"/><rect x="645" y="240" width="60" height="55"/>
+        <rect x="75" y="330" width="60" height="55"/><rect x="160" y="330" width="60" height="55"/>
+        <rect x="560" y="330" width="60" height="55"/><rect x="645" y="330" width="60" height="55"/>
+      </g>
+      <rect x="350" y="330" width="80" height="110" fill="#b5653a" stroke="#1b1b1b" stroke-width="5"/>
+      <line x1="740" y1="150" x2="740" y2="0" stroke="#1b1b1b" stroke-width="6"/>
+      <path id="flag" d="M740 5 L800 20 L740 40Z" fill="#ff3d6e" stroke="#1b1b1b" stroke-width="4"/>
+    </svg>
+    <div class="abs" style="left:0;top:590px;width:100%;height:130px;background:#c9a46a;border-top:6px solid #1b1b1b"></div>
+    <!-- kid -->
+    <svg class="abs" id="kid" style="top:400px" width="150" height="230" viewBox="-75 -10 150 230">
+      <g id="legL"><line x1="-12" y1="150" x2="-12" y2="205" stroke="#1d3b8f" stroke-width="16" stroke-linecap="round"/></g>
+      <g id="legR"><line x1="12" y1="150" x2="12" y2="205" stroke="#1d3b8f" stroke-width="16" stroke-linecap="round"/></g>
+      <rect x="-70" y="78" width="40" height="66" rx="10" fill="#e8312f" stroke="#1b1b1b" stroke-width="5"/>
+      <rect x="-30" y="75" width="60" height="80" rx="12" fill="#fff" stroke="#1b1b1b" stroke-width="5"/>
+      <rect x="-28" y="95" width="56" height="10" fill="#2fa8ff"/><rect x="-28" y="118" width="56" height="10" fill="#2fa8ff"/>
+      <circle cy="38" r="38" fill="#ffd8b0" stroke="#1b1b1b" stroke-width="5"/>
+      <path d="M-38 34 Q-40 -6 0 -2 Q40 -6 38 34 L30 22 L-30 22Z" fill="#2a1a10" stroke="#1b1b1b" stroke-width="4"/>
+      <circle cx="16" cy="40" r="4.5" fill="#1b1b1b"/><circle cx="-8" cy="40" r="4.5" fill="#1b1b1b"/>
+      <path d="M-2 54 Q8 62 18 54" stroke="#1b1b1b" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="28" cy="52" r="6" fill="#ff9aa8" opacity=".8"/>
+    </svg>
+    <div class="caption" id="c1">AM 08:20 · 등교 완료!</div>
+  </div>
+
+  <!-- S2: 교실 칠판 -->
+  <div class="scene" id="s2" style="background:#b07a44">
+    <div class="abs" style="left:70px;top:50px;width:1140px;height:540px;background:#24563f;border:18px solid #7b4a22;border-radius:8px;
+         box-shadow:inset 0 0 80px rgba(0,0,0,.5)"></div>
+    <div class="abs" style="left:70px;top:610px;width:1176px;height:22px;background:#5e3616"></div>
+    <div class="abs" style="left:900px;top:600px;width:70px;height:16px;background:#fff;border-radius:4px"></div>
+    <div class="abs" style="left:990px;top:603px;width:60px;height:14px;background:#ffd23f;border-radius:4px"></div>
+    <div class="abs chalk" id="b1" style="left:140px;top:110px;font-size:50px">1994년 3월 2일 (수) 맑음</div>
+    <div class="abs chalk" id="b2" style="left:140px;top:210px;font-size:72px;color:#fff59a">급훈 : 바르게 살자</div>
+    <div class="abs chalk" id="b3" style="left:140px;top:340px;font-size:54px">받아쓰기 &nbsp;100점</div>
+    <div class="abs chalk" id="b4" style="left:140px;top:430px;font-size:46px;color:#ffc2d6">주번 : 수범 &nbsp;떠든사람 : (없음)</div>
+    <svg class="abs" id="stamp" style="left:830px;top:200px" width="300" height="300" viewBox="-150 -150 300 300">
+      <circle r="120" fill="rgba(255,255,255,.08)" stroke="#ff2b4a" stroke-width="14"/>
+      <circle r="98" fill="none" stroke="#ff2b4a" stroke-width="5"/>
+      <text y="-12" text-anchor="middle" font-family="Do Hyeon" font-size="64" fill="#ff2b4a">참 잘</text>
+      <text y="60" text-anchor="middle" font-family="Do Hyeon" font-size="64" fill="#ff2b4a">했어요</text>
+    </svg>
+    <div class="caption" id="c2" style="bottom:40px">받아쓰기 100점 받은 날 ✏</div>
+  </div>
+
+  <!-- S3: 방과후 문방구 -->
+  <div class="scene" id="s3" style="background:#ff8a3d">
+    <div id="burst" class="abs" style="left:-460px;top:-640px;width:2200px;height:2200px;
+         background:repeating-conic-gradient(#ffa95e 0 10deg,#ff8a3d 10deg 20deg)"></div>
+    <div id="s3title" class="abs" style="left:0;width:100%;top:38px;text-align:center;font-size:82px;color:#fff;
+         -webkit-text-stroke:5px #1b1b1b;paint-order:stroke fill;text-shadow:7px 7px 0 #1b1b1b">방과후 = 문방구 앞 집합!</div>
+    <div class="card" id="k0" style="left:110px;top:190px;background:#ffe14a">
+      <svg viewBox="0 0 110 90"><rect x="10" y="30" width="90" height="30" rx="8" fill="#e8532f" stroke="#1b1b1b" stroke-width="5"/><path d="M25 30v30M45 30v30M65 30v30M85 30v30" stroke="#ffb07a" stroke-width="4"/></svg>쫀드기 50원</div>
+    <div class="card" id="k1" style="left:515px;top:190px;background:#7fe0ff">
+      <svg viewBox="0 0 110 90"><rect x="18" y="12" width="70" height="70" fill="#2f6bff" stroke="#1b1b1b" stroke-width="5" transform="rotate(-10 55 45)"/><path d="M28 20 L80 72 M80 20 L28 72" stroke="#ffd23f" stroke-width="6" transform="rotate(-10 55 45)"/></svg>딱지치기</div>
+    <div class="card" id="k2" style="left:920px;top:190px;background:#b7f28a">
+      <svg viewBox="0 0 110 90"><circle cx="30" cy="55" r="20" fill="#7fd3ff" stroke="#1b1b1b" stroke-width="5"/><circle cx="72" cy="50" r="24" fill="#ff7aa8" stroke="#1b1b1b" stroke-width="5"/><circle cx="64" cy="42" r="6" fill="#fff"/><circle cx="24" cy="48" r="5" fill="#fff"/></svg>구슬치기</div>
+    <div class="card" id="k3" style="left:110px;top:430px;background:#ffb3d1">
+      <svg viewBox="0 0 110 90"><rect x="20" y="8" width="70" height="76" rx="6" fill="#444" stroke="#1b1b1b" stroke-width="5"/><rect x="28" y="16" width="54" height="34" fill="#3dff9a"/><circle cx="40" cy="66" r="7" fill="#ff3d6e"/><circle cx="70" cy="66" r="7" fill="#ffd23f"/></svg>오락실 한 판</div>
+    <div class="card" id="k4" style="left:515px;top:430px;background:#fff">
+      <svg viewBox="0 0 110 90"><path d="M12 45 Q55 95 98 45Z" fill="#ff4a2f" stroke="#1b1b1b" stroke-width="5"/><path d="M38 52 l12 -30 M58 54 l8 -32" stroke="#fff3c9" stroke-width="9" stroke-linecap="round"/></svg>컵떡볶이 100원</div>
+    <div class="card" id="k5" style="left:920px;top:430px;background:#d6b8ff">
+      <svg viewBox="0 0 110 90"><rect x="10" y="18" width="90" height="56" rx="6" fill="#2a2a2a" stroke="#1b1b1b" stroke-width="5"/><rect x="22" y="28" width="66" height="22" fill="#ffd23f"/><circle cx="38" cy="39" r="7" fill="#2a2a2a"/><circle cx="72" cy="39" r="7" fill="#2a2a2a"/></svg>가요톱텐 녹음</div>
+  </div>
+
+  <!-- S4: 아웃트로 -->
+  <div class="scene" id="s4" style="background:#e9dcc0">
+    <div class="abs" style="inset:0;background-image:radial-gradient(rgba(120,90,50,.18) 2px,transparent 2px);background-size:24px 24px"></div>
+    <div id="polaroid" class="abs" style="left:170px;top:90px;width:430px;height:500px;background:#fff;box-shadow:12px 14px 0 rgba(0,0,0,.25);border:3px solid #1b1b1b">
+      <div class="abs" style="left:25px;top:25px;width:380px;height:360px;overflow:hidden;background:linear-gradient(#ffcf8a,#ff9f6b);border:3px solid #1b1b1b;filter:sepia(.45)">
+        <svg class="abs" style="left:30px;top:120px" width="320" height="240" viewBox="0 0 320 240">
+          <rect x="0" y="80" width="320" height="160" fill="#f4e3c1" stroke="#1b1b1b" stroke-width="5"/>
+          <rect x="120" y="30" width="80" height="210" fill="#efd6a6" stroke="#1b1b1b" stroke-width="5"/>
+          <circle cx="160" cy="65" r="20" fill="#fff" stroke="#1b1b1b" stroke-width="4"/>
+        </svg>
+        <svg class="abs" style="left:230px;top:200px" width="110" height="170" viewBox="-75 -10 150 230">
+          <line x1="-12" y1="150" x2="-12" y2="205" stroke="#1d3b8f" stroke-width="16" stroke-linecap="round"/>
+          <line x1="12" y1="150" x2="12" y2="205" stroke="#1d3b8f" stroke-width="16" stroke-linecap="round"/>
+          <rect x="-30" y="75" width="60" height="80" rx="12" fill="#fff" stroke="#1b1b1b" stroke-width="5"/>
+          <line x1="30" y1="90" x2="62" y2="40" stroke="#ffd8b0" stroke-width="14" stroke-linecap="round"/>
+          <circle cy="38" r="38" fill="#ffd8b0" stroke="#1b1b1b" stroke-width="5"/>
+          <path d="M-38 34 Q-40 -6 0 -2 Q40 -6 38 34 L30 22 L-30 22Z" fill="#2a1a10"/>
+          <path d="M-16 40 q6 -6 12 0 M6 40 q6 -6 12 0" stroke="#1b1b1b" stroke-width="4" fill="none"/>
+          <path d="M-12 54 Q0 68 12 54" stroke="#1b1b1b" stroke-width="4" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="abs" style="left:0;width:100%;top:400px;text-align:center;font-family:'Jua';font-size:44px;color:#2a2a8a">'94 봄, 수범</div>
+    </div>
+    <div id="o1" class="abs" style="left:680px;top:200px;font-size:64px;color:#3a2a1a">그 시절 수범이는</div>
+    <div id="o2" class="abs" style="left:680px;top:300px;font-size:104px;color:#ff3d6e;-webkit-text-stroke:5px #1b1b1b;paint-order:stroke fill;text-shadow:7px 7px 0 #1b1b1b">참 행복했다</div>
+    <div id="o3" class="abs" style="left:684px;top:450px;font-family:'Do Hyeon';font-size:36px;color:#6b5a44">구독 · 좋아요 대신 &nbsp;딱지 한 장 ♥</div>
+  </div>
+
+  <!-- overlays -->
+  <canvas id="noise" width="320" height="180"></canvas>
+  <div id="track"></div>
+  <div class="hud" id="rec" style="left:56px;top:40px"><span id="dot" style="color:#ff2b2b">●</span> REC</div>
+  <div class="hud" id="sp" style="right:56px;top:40px">SP ▶</div>
+  <div class="hud" id="cnt" style="left:56px;bottom:36px">0:00:00</div>
+  <div class="hud" id="date" style="right:56px;bottom:36px;text-align:right;line-height:.95">AM 08:12<br>MAR. 2 1994</div>
+  <div class="hud" id="stop" style="left:56px;top:40px;font-size:56px;opacity:0">■ STOP</div>
+  <div id="black" class="abs" style="inset:0;background:#000;z-index:70;opacity:0"></div>
+  <div id="scan"></div><div id="vig"></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const seg = (t,a,b)=>clamp((t-a)/(b-a));
+const easeOut = x=>1-Math.pow(1-x,3);
+const easeIn = x=>x*x*x;
+const back = x=>{const c=1.9;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const elastic = x=> x===0||x===1?x:Math.pow(2,-10*x)*Math.sin((x*10-.75)*2*Math.PI/3)+1;
+let seed=1; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+const nctx=$('noise').getContext('2d'); const img=nctx.createImageData(320,180);
+
+function noise(amount,f){
+  seed = 1000+f*7919;
+  const d=img.data;
+  for(let i=0;i<d.length;i+=4){const v=rnd()*255;d[i]=d[i+1]=d[i+2]=v;d[i+3]=v*amount;}
+  nctx.putImageData(img,0,0);
+}
+function show(id,o){$(id).style.opacity=o}
+function tf(id,s){$(id).style.transform=s}
+
+const cuts=[2,4,6,8];
+function render(t){
+  const f=Math.round(t*30);
+  // scene visibility (hard cuts, glitch hides seams)
+  ['s0','s1','s2','s3','s4'].forEach((s,i)=>show(s, (t>=[0,2,4,6,8][i] && t<[2,4,6,8,99][i])?1:0));
+
+  // glitch intensity around cuts
+  let g=0; cuts.forEach(c=>{g=Math.max(g,1-Math.abs(t-c)/0.18)}); g=clamp(g);
+  let n = 0.06 + g*0.75;
+  if(t<0.55) n = 1;                         // opening static
+  noise(n,f);
+  const jx = g>0? (rnd()-.5)*40*g : 0;
+  $('stage').style.filter = `saturate(1.15) contrast(1.05) hue-rotate(${g*30}deg)`;
+  ['s0','s1','s2','s3','s4'].forEach(s=>tf(s,`translateX(${jx}px) skewX(${g*(rnd()-.5)*12}deg)`));
+  $('track').style.top = ((t*260)%900 - 120)+'px';
+  $('track').style.opacity = 0.35 + g*0.6;
+
+  // HUD
+  $('dot').style.opacity = (Math.floor(t*2)%2===0)?1:0;
+  const sec=Math.floor(t), fr=f%30;
+  $('cnt').textContent = `0:00:${String(sec).padStart(2,'0')}.${String(fr).padStart(2,'0')}`;
+  const clock = [[8,12],[8,20],[10,45],[15,30],[18,5]][Math.min(4,Math.floor(t/2))];
+  const ss = String(Math.floor((t%2)*7)).padStart(2,'0');
+  $('date').innerHTML = `${clock[0]<12?'AM':'PM'} ${String(clock[0]>12?clock[0]-12:clock[0]).padStart(2,'0')}:${String(clock[1]).padStart(2,'0')}:${ss}<br>MAR. 2 1994`;
+  const hudOn = t>0.55;
+  ['rec','sp','cnt','date'].forEach(h=>show(h, hudOn && t<9.4 ?1:0));
+
+  // ---- S0
+  show('play', t>0.55 && t<1.05 && (Math.floor(t*6)%2===0) ? 1 : (t>0.55&&t<1.05?0.6:0));
+  const ti = seg(t,1.0,1.15); show('title', ti>0?1:0);
+  tf('dots',`translate(${(t*40)%90}px,${(t*40)%90}px)`);
+  const a1=seg(t,1.05,1.4), a2=seg(t,1.2,1.65), a3=seg(t,1.45,1.85);
+  tf('t1',`translateY(${(1-easeOut(a1))*-200}px)`); show('t1',a1>0?1:0);
+  tf('t2',`scale(${a2>0?back(a2):0}) rotate(${(1-a2)*-8}deg)`);
+  tf('t3',`scale(${a3>0?elastic(a3):0}) rotate(${-12+Math.sin(t*6)*6}deg)`);
+
+  // ---- S1
+  const u=seg(t,2,4);
+  tf('sun',`rotate(${t*40}deg)`);
+  $('cloud1').style.left = (100+u*120)+'px'; $('cloud2').style.left=(650-u*90)+'px';
+  tf('school',`scale(${1.06-u*0.06})`); $('school').style.transformOrigin='center bottom';
+  tf('flag',`skewY(${Math.sin(t*14)*8}deg)`); $('flag').style.transformOrigin='740px 20px';
+  $('kid').style.left = (-160 + easeOut(u)*640)+'px';
+  const step=Math.sin(t*22);
+  tf('kid',`translateY(${Math.abs(step)*-10}px) rotate(${step*2}deg)`);
+  $('legL').setAttribute('transform',`rotate(${step*22} -12 150)`);
+  $('legR').setAttribute('transform',`rotate(${-step*22} 12 150)`);
+  const c1=seg(t,2.35,2.7);
+  tf('c1',`translateX(-50%) translateY(${(1-back(c1))*220}px)`);
+
+  // ---- S2 chalk reveals
+  [['b1',4.1,4.45],['b2',4.35,4.85],['b3',4.8,5.1],['b4',5.05,5.4]].forEach(([id,a,b])=>{
+    const p=seg(t,a,b); $(id).style.clipPath=`inset(0 ${100-p*100}% 0 0)`;
+  });
+  const sp=seg(t,5.05,5.3);
+  const shake = (t>5.3&&t<5.5)? Math.sin(t*120)*6*(1-seg(t,5.3,5.5)):0;
+  show('stamp', sp>0?1:0);
+  tf('stamp',`scale(${sp>0? 1+ (1-easeIn(sp))*2.2 : 0}) rotate(${-14}deg)`);
+  tf('s2',`translateX(${jx+shake}px) translateY(${shake*.6}px)`);
+  const c2=seg(t,5.3,5.6); tf('c2',`translateX(-50%) translateY(${(1-back(c2))*220}px)`);
+
+  // ---- S3
+  tf('burst',`rotate(${t*25}deg)`);
+  const st=seg(t,6.0,6.3); tf('s3title',`scale(${st>0?back(st):0})`);
+  for(let i=0;i<6;i++){
+    const p=seg(t,6.15+i*0.13,6.55+i*0.13);
+    const wob=Math.sin(t*8+i)*4;
+    tf('k'+i,`scale(${p>0?elastic(p):0}) rotate(${(i%2?1:-1)*(3+ (1-p)*25)+wob}deg)`);
+  }
+
+  // ---- S4
+  const pd=seg(t,8.0,8.5);
+  tf('polaroid',`translateY(${(1-easeOut(pd))*-700}px) rotate(${-6+(1-pd)*-20}deg)`);
+  const o1=seg(t,8.4,8.75), o2=seg(t,8.7,9.05), o3=seg(t,9.0,9.3);
+  show('o1',o1); tf('o1',`translateX(${(1-easeOut(o1))*60}px)`);
+  tf('o2',`scale(${o2>0?back(o2):0})`); $('o2').style.transformOrigin='left center';
+  show('o3',o3);
+
+  // STOP + rewind tail
+  const so = t>9.4 && t<9.85 ? 1:0;
+  show('stop',so);
+  const rw=seg(t,9.4,9.85);
+  if(t>9.4){ noise(0.15+rw*0.6,f); tf('s4',`translateY(${Math.sin(f*1.7)*rw*14}px) skewX(${rw*-8}deg)`); }
+  show('black', seg(t,9.8,10.0));
+}
+window.render=render;
+render(0);
+</script>
+</body>
+</html>
