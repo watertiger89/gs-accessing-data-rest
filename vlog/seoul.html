@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>Seoul 1994</title>
+<link rel="stylesheet" href="fonts/dohyeon/index.css">
+<style>
+html,body{margin:0;background:#000;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#000}
+.shot{position:absolute;inset:0;opacity:0}
+.shot img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 50%}
+.cap{position:absolute;left:50%;top:1150px;transform:translateX(-50%);background:#000;color:#fff;font-family:'Do Hyeon';
+     font-size:60px;padding:14px 30px 10px;border-radius:14px;white-space:nowrap;letter-spacing:-.5px}
+#grade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,190,110,.10),rgba(120,70,20,.12));mix-blend-mode:multiply}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 60%,rgba(0,0,0,.45) 100%)}
+#grain{position:absolute;inset:0;width:100%;height:100%;opacity:.10;mix-blend-mode:overlay}
+#end{position:absolute;inset:0;background:#000;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f3e6cf;font-family:'Do Hyeon'}
+</style></head><body>
+<div id="stage">
+  <div class="shot" id="h0"><img src="photos/p1.jpg"><div class="cap" id="c0">You wake up in Seoul, 1994.</div></div>
+  <div class="shot" id="h1"><img src="photos/p2.jpg"><div class="cap" id="c1">실내화 주머니 빙빙 돌리며, 등굣길</div></div>
+  <div class="shot" id="h2"><img src="photos/p3.jpg"><div class="cap" id="c2">월요일 아침, 운동장 조회 시간</div></div>
+  <div class="shot" id="h3"><img src="photos/p4.jpg"><div class="cap" id="c3" style="top:830px">받아쓰기 100점. 오늘은 칭찬받는 날</div></div>
+  <div id="grade"></div><div id="vig"></div>
+  <canvas id="grain" width="270" height="480"></canvas>
+  <div id="end"><div id="e1" style="font-size:96px">1994, 수범의 하루</div>
+    <div id="e2" style="font-size:46px;margin-top:24px;opacity:.75">새싹국민학교 3학년 2반</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const seg=(t,a,b)=>clamp((t-a)/(b-a));
+const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+const g=$('grain').getContext('2d'),img=g.createImageData(270,480);let s=1;
+const rnd=()=>{s=(s*16807)%2147483647;return s/2147483647};
+// shot timing: each 5s, 0.6s crossfade; last shot ends into end card
+const D=[[0,5.3],[4.7,10.3],[9.7,15.3],[14.7,18.6]];
+// camera moves: [scaleFrom, scaleTo, xFrom, xTo, yFrom, yTo] (px)
+const M=[[1.18,1.04,0,0,-40,30],[1.05,1.20,0,0,40,-20],[1.20,1.06,-40,30,0,0],[1.04,1.18,0,0,60,-60]];
+function render(t){
+  D.forEach(([a,b],i)=>{
+    const o=Math.min(seg(t,a,a+0.6), 1-seg(t,b-0.6,b)); const el=$('h'+i);
+    el.style.opacity= i===0? (t<b-0.6?1:1-seg(t,b-0.6,b)) : o;
+    const p=ease(seg(t,a,b)); const m=M[i];
+    el.querySelector('img').style.transform=`translate(${m[2]+(m[3]-m[2])*p}px,${m[4]+(m[5]-m[4])*p}px) scale(${m[0]+(m[1]-m[0])*p})`;
+    const c=$('c'+i), cp=seg(t,a+0.7,a+1.1), co=1-seg(t,b-0.9,b-0.6);
+    c.style.opacity=Math.min(cp,co); c.style.transform=`translateX(-50%) translateY(${(1-cp)*14}px)`;
+  });
+  // opening fade-in from black and slight flicker
+  $('stage').style.filter=`brightness(${seg(t,0,0.8)*(0.97+0.03*Math.sin(t*53))})`;
+  s=1+Math.round(t*30)*977; const d=img.data;
+  for(let i=0;i<d.length;i+=4){const v=rnd()*255;d[i]=d[i+1]=d[i+2]=v;d[i+3]=255}
+  g.putImageData(img,0,0);
+  const e=seg(t,18.2,18.9); $('end').style.opacity=e;
+  $('e1').style.opacity=seg(t,18.6,19.2); $('e2').style.opacity=.75*seg(t,18.9,19.4);
+  $('e1').style.transform=`translateY(${(1-seg(t,18.6,19.2))*20}px)`;
+  if(t>19.6) $('end').style.filter=`brightness(${1-seg(t,19.6,20)})`;
+}
+window.render=render; render(0);
+</script></body></html>
